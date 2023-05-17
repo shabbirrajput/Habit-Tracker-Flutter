@@ -14,7 +14,7 @@ class _ScreenSplashState extends State<ScreenSplash> {
   void initState() {
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => const ScreenOnboarding()),
+          MaterialPageRoute(builder: (context) => ScreenOnBoarding()),
           (Route<dynamic> route) => false);
     });
     super.initState();
