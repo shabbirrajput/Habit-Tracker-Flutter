@@ -16,4 +16,17 @@ class AppString {
       'You can track your progress through the calendar view in every habit or on the statistics page.';
   static const textDone = 'Done';
   static const textSkip = 'Skip';
+  static const textNothing = '';
+  static const textJanuary = 'January';
+  static const textFebruary = 'February';
+  static const textMarch = 'March';
+  static const textApril = 'April';
+  static const textMay = 'May';
+  static const textJune = 'June';
+  static const textJuly = 'July';
+  static const textAugust = 'August';
+  static const textSeptember = 'September';
+  static const textOctober = 'October';
+  static const textNovember = 'November';
+  static const textDecember = 'December';
 }

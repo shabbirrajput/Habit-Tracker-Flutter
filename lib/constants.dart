@@ -1,28 +1,21 @@
-import 'package:flutter/material.dart';
+import 'package:habit_tracker/core/app_string.dart';
 
 List<String> months = [
-  "",
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  AppString.textNothing,
+  AppString.textJanuary,
+  AppString.textFebruary,
+  AppString.textMarch,
+  AppString.textApril,
+  AppString.textMay,
+  AppString.textJune,
+  AppString.textJuly,
+  AppString.textAugust,
+  AppString.textSeptember,
+  AppString.textOctober,
+  AppString.textNovember,
+  AppString.textDecember,
 ];
 
 enum Themes { device, light, dark }
 
 enum DayType { clear, check, fail, skip }
-
-class HaboColors {
-  static const Color primary = Color(0xFF09BF30);
-  static const Color red = Color(0xFFF44336);
-  static const Color skip = Color(0xFFFBC02D);
-  static const Color orange = Color(0xFFFF9800);
-}

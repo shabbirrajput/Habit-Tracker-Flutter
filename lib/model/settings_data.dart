@@ -36,13 +36,13 @@ class SettingsData {
             (json['seenOnboarding'] != null) ? json['seenOnboarding'] : false,
         checkColor = (json['checkColor'] != null)
             ? Color(json['checkColor'])
-            : HaboColors.primary,
+            : AppColors.colorPrimary,
         failColor = (json['failColor'] != null)
             ? Color(json['failColor'])
-            : HaboColors.red,
+            : AppColors.colorRed,
         skipColor = (json['skipColor'] != null)
             ? Color(json['skipColor'])
-            : HaboColors.skip;
+            : AppColors.colorSkip;
 
   Map<String, dynamic> toJson() => {
         'theme': theme.index,
