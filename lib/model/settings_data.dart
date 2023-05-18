@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/constants.dart';
-import 'package:habit_tracker/core/app_color.dart';
+import 'package:habit_tracker/core/utils/app_color.dart';
 import 'package:habit_tracker/helpers.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -13,7 +13,7 @@ class SettingsData {
   bool showDailyNot = true;
   bool soundEffects = true;
   bool showMonthName = true;
-  bool seenOnboarding = false;
+  bool seenOnBoarding = false;
   Color checkColor = AppColors.colorPrimary;
   Color failColor = AppColors.colorRed;
   Color skipColor = AppColors.colorSkip;
@@ -32,8 +32,8 @@ class SettingsData {
         dailyNotTime = (json['notTime'] != null)
             ? parseTimeOfDay(json['notTime'])
             : const TimeOfDay(hour: 20, minute: 0),
-        seenOnboarding =
-            (json['seenOnboarding'] != null) ? json['seenOnboarding'] : false,
+        seenOnBoarding =
+            (json['seenOnBoarding'] != null) ? json['seenOnBoarding'] : false,
         checkColor = (json['checkColor'] != null)
             ? Color(json['checkColor'])
             : AppColors.colorPrimary,
@@ -44,7 +44,8 @@ class SettingsData {
             ? Color(json['skipColor'])
             : AppColors.colorSkip;
 
-  Map<String, dynamic> toJson() => {
+  Map<String, dynamic> toJson() =>
+      {
         'theme': theme.index,
         'weekStart': weekStart.index,
         'notTime':
@@ -52,7 +53,7 @@ class SettingsData {
         'showDailyNot': showDailyNot,
         'soundEffects': soundEffects,
         'showMonthName': showMonthName,
-        'seenOnboarding': seenOnboarding,
+        'seenOnBoarding': seenOnBoarding,
         'checkColor': checkColor.value,
         'failColor': failColor.value,
         'skipColor': skipColor.value,

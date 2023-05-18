@@ -119,8 +119,8 @@ class SettingsManager extends ChangeNotifier {
     return _settingsData.showMonthName;
   }
 
-  bool get getSeenOnboarding {
-    return _settingsData.seenOnboarding;
+  bool get getseenOnBoarding {
+    return _settingsData.seenOnBoarding;
   }
 
   Color get checkColor {
@@ -182,8 +182,8 @@ class SettingsManager extends ChangeNotifier {
     notifyListeners();
   }
 
-  set setSeenOnboarding(bool value) {
-    _settingsData.seenOnboarding = value;
+  set setseenOnBoarding(bool value) {
+    _settingsData.seenOnBoarding = value;
     saveData();
     notifyListeners();
   }

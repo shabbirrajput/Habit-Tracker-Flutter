@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:habit_tracker/core/app_color.dart';
+import 'package:habit_tracker/core/utils/app_color.dart';
 
 /// > AppFont is a class that contains a static method that returns a font family name
 class AppFont {

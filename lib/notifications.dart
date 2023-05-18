@@ -1,6 +1,6 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
-import 'package:habit_tracker/core/app_color.dart';
+import 'package:habit_tracker/core/utils/app_color.dart';
 
 void initializeNotifications() {
   AwesomeNotifications().initialize(
@@ -10,7 +10,7 @@ void initializeNotifications() {
           channelKey: 'app_notifications_habo',
           channelName: 'App notifications',
           channelDescription:
-          'Notification channel for application notifications',
+              'Notification channel for application notifications',
           defaultColor: AppColors.colorPrimary,
           importance: NotificationImportance.Max,
           criticalAlerts: true),
@@ -41,8 +41,8 @@ void setAppNotification(TimeOfDay timeOfDay) async {
       'Do not forget to check your habits.', 'app_notifications_habo');
 }
 
-void setHabitNotification(int id, TimeOfDay timeOfDay, String title,
-    String desc) {
+void setHabitNotification(
+    int id, TimeOfDay timeOfDay, String title, String desc) {
   _setupDailyNotification(
       id, timeOfDay, title, desc, 'habit_notifications_habo');
 }
@@ -58,7 +58,7 @@ void disableAppNotification() {
 Future<void> _setupDailyNotification(int id, TimeOfDay timeOfDay, String title,
     String desc, String channel) async {
   String localTimeZone =
-  await AwesomeNotifications().getLocalTimeZoneIdentifier();
+      await AwesomeNotifications().getLocalTimeZoneIdentifier();
   await AwesomeNotifications().createNotification(
     content: NotificationContent(
       id: id,

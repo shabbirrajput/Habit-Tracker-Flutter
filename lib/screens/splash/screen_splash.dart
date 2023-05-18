@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habit_tracker/core/app_image.dart';
-import 'package:habit_tracker/screens/onboarding/screen_onboarding.dart';
+import 'package:habit_tracker/core/utils/app_image.dart';
+import 'package:habit_tracker/core/utils/app_routes.dart';
+import 'package:habit_tracker/core/utils/navigator_key.dart';
 
 class ScreenSplash extends StatefulWidget {
   const ScreenSplash({Key? key}) : super(key: key);
@@ -12,10 +13,9 @@ class ScreenSplash extends StatefulWidget {
 class _ScreenSplashState extends State<ScreenSplash> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 2), () {
-      Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => ScreenOnBoarding()),
-          (Route<dynamic> route) => false);
+    Future.delayed(const Duration(seconds: 2), () async {
+      NavigatorKey.navigatorKey.currentState!.pushNamedAndRemoveUntil(
+          AppRoutes.routesOnBoarding, (route) => false);
     });
     super.initState();
   }

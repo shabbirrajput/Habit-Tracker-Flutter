@@ -1,7 +1,7 @@
-import 'package:habit_tracker/core/app_string.dart';
+import 'package:habit_tracker/core/utils/app_string.dart';
 
 List<String> months = [
-  AppString.textNothing,
+  AppString.textComma,
   AppString.textJanuary,
   AppString.textFebruary,
   AppString.textMarch,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:habit_tracker/core/app_color.dart';
-import 'package:habit_tracker/core/app_dimens.dart';
-import 'package:habit_tracker/core/app_image.dart';
-import 'package:habit_tracker/core/app_string.dart';
+import 'package:habit_tracker/core/utils/app_color.dart';
+import 'package:habit_tracker/core/utils/app_dimens.dart';
+import 'package:habit_tracker/core/utils/app_image.dart';
+import 'package:habit_tracker/core/utils/app_string.dart';
 import 'package:habit_tracker/screens/settings/settings_manager.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:provider/provider.dart';
@@ -171,11 +171,11 @@ class ScreenOnBoarding extends StatelessWidget {
       ),
       onDone: () {
         if (Provider.of<SettingsManager>(context, listen: false)
-            .getSeenOnboarding) {
+            .getseenOnBoarding) {
           Navigator.pop(context);
         } else {
           Provider.of<SettingsManager>(context, listen: false)
-              .setSeenOnboarding = true;
+              .setseenOnBoarding = true;
         }
       },
       next: const Icon(Icons.arrow_forward),
